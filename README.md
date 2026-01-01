@@ -20,9 +20,15 @@ Brief description of the DUT and its functionality.
 
 ## Tools & Languages
 - SystemVerilog, UVM
-- C++ (if used)
 - Linux-based simulation environment
 
 ## How to Run
 ```bash
 make run
+
+## Run (ModelSim Intel FPGA Edition)
+cd C:/.../uvm-refresh
+vlib work
+vlog -sv -work work -f scripts/files.f
+vsim -c top_tb
+run 2 us
